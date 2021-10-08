@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  broker:
+    image: rabbitmq:3.9
+
+  celery:
+    build: .
+    links:
+      - broker
